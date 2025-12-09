@@ -1,0 +1,13 @@
+from pydantic import BaseModel
+
+
+class {{ class_name }}Base(BaseModel):
+    name: str
+
+
+class {{ class_name }}Create({{ class_name }}Base):
+    pass
+
+
+class {{ class_name }}Out({{ class_name }}Base):
+    id: int

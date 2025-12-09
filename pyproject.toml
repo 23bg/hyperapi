@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyperapi"
+version = "0.0.1"
+description = "HyperAPI - Opinionated Backend Framework on Top of FastAPI"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+authors = [
+  { name = "Mr. Prathamesh More", email = "iamprathamshmore07@gmail.com" },
+]
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Framework :: FastAPI",
+  "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+
+# ====== RUNTIME DEPENDENCIES ======
+dependencies = [
+  "fastapi>=0.115",
+  "uvicorn[standard]>=0.30",
+  "typer[all]>=0.9",
+  "python-dotenv>=1.0.0",
+]
+
+# ====== OPTIONAL DEV DEPENDENCIES ======
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=4.0",
+  "black>=24.0",
+  "ruff>=0.4.0",
+  "mypy>=1.9.0",
+  "pre-commit>=3.7.0",
+]
+
+# ====== CLI ENTRYPOINT ======
+[project.scripts]
+hyperapi = "hyperapi_cli.__main__:main"
+
+# ====== PACKAGE DISCOVERY ======
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# ====== INCLUDE TEMPLATE FILES IN WHEELS ======
+[tool.setuptools.package-data]
+hyperapi_cli = ["templates/**/*"]
+
+# ====== FORMATTERS AND LINTING (OPTIONAL BUT RECOMMENDED) ======
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "I"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.8"
+ignore_missing_imports = true
+strict = false
