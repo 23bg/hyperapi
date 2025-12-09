@@ -46,7 +46,7 @@ dev = [
 
 # ====== CLI ENTRYPOINT ======
 [project.scripts]
-RacerAPI = "RacerAPI_cli.__main__:main"
+RacerAPI = "racerapi_cli.__main__:main"
 
 # ====== PACKAGE DISCOVERY ======
 [tool.setuptools.packages.find]
