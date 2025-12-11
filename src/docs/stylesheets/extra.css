@@ -1,0 +1,22 @@
+/* Import DM Sans from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Apply DM Sans globally */
+:root {
+    --md-text-font-family: "DM Sans", sans-serif;
+}
+
+/* Optional: Customize headings */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+}
+
+/* Slightly round corners on UI */
+.md-nav__item,
+.md-button {
+    border-radius: 8px;
+}

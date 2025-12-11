@@ -1,0 +1,88 @@
+site_name: RacerAPI Documentation
+
+repo_url: https://github.com/23bg/racerapi
+repo_name: GitHub
+repo_icon: fontawesome/brands/github
+
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+
+  code:
+    light: github
+    dark: dracula
+
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: deep orange
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+  font:
+    text: "DM Sans"
+    code: "Fira Code"
+
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+    - content.tabs.link
+    - palette.toggle
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.expand
+    - navigation.footer
+
+plugins:
+  - search
+  - mkdocstrings
+  - awesome-pages
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/23bg/racerapi
+  copyright:
+    text: "© 2025 RacerAPI Framework"
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Features:
+      - Controllers: core/controllers.md
+      - Decorators: core/decorators.md
+      - Lifecycle: core/lifecycle.md
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - def_list
+  - toc:
+      permalink: True
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
