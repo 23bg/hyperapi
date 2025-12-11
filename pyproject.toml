@@ -46,7 +46,7 @@ dev = [
 
 # ====== CLI ENTRYPOINT ======
 [project.scripts]
-RacerAPI = "racerapi_cli.__main__:main"
+racerapi = "racerapi.__main__:main"
 
 # ====== PACKAGE DISCOVERY ======
 [tool.setuptools.packages.find]
@@ -54,7 +54,7 @@ where = ["src"]
 
 # ====== INCLUDE TEMPLATE FILES IN WHEELS ======
 [tool.setuptools.package-data]
-RacerAPI_cli = ["templates/**/*"]
+racerapi = ["templates/**/*"]
 
 # ====== FORMATTERS AND LINTING (OPTIONAL BUT RECOMMENDED) ======
 [tool.black]
